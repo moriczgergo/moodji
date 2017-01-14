@@ -29,7 +29,7 @@
 	<body>
 		<div id="header">
 			<center> <!-- CENTER BEGIN !-->
-				<h1>&#x1F601; <!-- HTML MADNESS! !--><div id="letterm">M</div><div id="letteroone">O</div><div id="letterotwo">O</div><div id="letterd">D</div><div id="letterj">J</div><div id="letteri">I</div> &#x1F601;</h1> <!-- Title !-->
+				<h1>&#x1F601; <img src="img/logo.png"> &#x1F601;</h1> <!-- Title !-->
 			</center> <!-- CENTER END !-->
 			<hr> <!-- Horizontal line !-->
 		</div>
