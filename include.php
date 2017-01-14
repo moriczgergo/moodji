@@ -16,6 +16,10 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 
+		<!-- Include CSS files !-->
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/body.css">
+
 		<!-- Bootstrap 4 CDN !-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
@@ -23,10 +27,12 @@
 		<title>MOODJI</title>
 	</head>
 	<body>
-		<center> <!-- CENTER BEGIN !-->
-			<h1>&#x1F601; MOODJI &#x1F601;</h1> <!-- Title !-->
-		</center> <!-- CENTER END !-->
-		<hr> <!-- Horizontal line !-->
+		<div id="header">
+			<center> <!-- CENTER BEGIN !-->
+				<h1>&#x1F601; MOODJI &#x1F601;</h1> <!-- Title !-->
+			</center> <!-- CENTER END !-->
+			<hr> <!-- Horizontal line !-->
+		</div>
 
 		<!-- Bootstrap 4 CDN !-->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
