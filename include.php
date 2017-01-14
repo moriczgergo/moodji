@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<center> <!-- CENTER BEGIN !-->
-			<h1>MOODJI</h1> <!-- Title !-->
+			<h1>&#x1F601; MOODJI &#x1F601;</h1> <!-- Title !-->
 		</center> <!-- CENTER END !-->
 		<hr> <!-- Horizontal line !-->
 
