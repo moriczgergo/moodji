@@ -28,7 +28,8 @@ if (isset($_POST["user"]) && isset($_POST["pass"]))
 		$stmt->store_result();
 
 		if($stmt->num_rows == 1){
-			$row = $stmt->fetch_assoc();
+			$result = $stmt->get_result();
+			$row = $result->fetch_assoc();
 			if (password_verify($pass, $row["password"]) === TRUE){
 				session_start();
 				$_SESSION["username"] = $user;
