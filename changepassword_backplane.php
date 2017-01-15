@@ -10,7 +10,7 @@ if (isset($_POST["currpass"]) && isset($_POST["newpass"]) && isset($_POST["newpa
 		$newpass = $_POST["newpass"];
 		$newpassver = $_POST["newpassver"];
 
-		if ($newpass == $newpassver){
+		if ($newpass != $newpassver){
 			printError("wrongver");
 			die();
 		}
