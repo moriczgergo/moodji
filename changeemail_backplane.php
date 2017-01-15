@@ -78,4 +78,4 @@ function printError($error, $ext = ""){
 function printSuccess(){
 	echo "<center><h1>Success!</h1><p><a href=\"index.php\">Return to home</a></p></center>";
 }
-?>úű
+?>
