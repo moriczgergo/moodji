@@ -11,7 +11,7 @@ include "include.php";
 				<h3>Password</h3>
 				<input type="password" name="pass">
 				<h3>E-Mail</h3>
-				<input type="text" name="mail"><br>
+				<input type="text" name="mail"><br><br>
 				<input type="submit" name="submit" value="Register">
 			</form>
 		</center>
