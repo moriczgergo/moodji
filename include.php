@@ -30,7 +30,20 @@
 		<div id="header">
 			<center> <!-- CENTER BEGIN !-->
 				<h1>&#x1F601; <img src="img/logo.png"> &#x1F601;</h1> <!-- Title !-->
-				<h4><a href="register.php">Register</a> - <a href="login.php">Login</a></h4>
+				<h4>
+				<?php
+				session_start();
+				if (isset($_SESSION["username"]) && isset($_SESSION["uid"])){
+				?>
+				<a href="dashboard.php">Dashboard</a> - <a href="friends.php">Friends</a> - <a href="logout.php">Logout</a>	
+				<?php
+				} else {
+				?>
+				<a href="register.php">Register</a> - <a href="login.php">Login</a>	
+				<?php
+				}
+				?>
+				</h4>
 			</center> <!-- CENTER END !-->
 		</div>
 		<hr> <!-- Horizontal line !-->
