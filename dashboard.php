@@ -29,7 +29,7 @@ if($stmt->num_rows == 1){
 	die();
 }
 
-$mood = base64_decode($selectmood);
+$mood = hex2bin($selectmood);
 
 function printError($error, $ext = ""){
 	if ($error == "fewval"){
