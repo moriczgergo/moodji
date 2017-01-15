@@ -17,14 +17,14 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
     		die();
 		}
 
-		$stmt = $conn->prepare("SELECT username FROM users WHERE username='?'");
+		$stmt = $conn->prepare("SELECT `username` FROM `users` WHERE `username`=?");
 		$stmt->bind_param("s", $user);
 		$result = $stmt->execute();
 
 		if($result->num_rows == 0){
 			$pass_hash = password_hash($pass, PASSWORD_DEFAULT);
 
-			$stmt = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
+			$stmt = $conn->prepare("INSERT INTO `users` (`username`, `password`, `email`) VALUES (?, ?, ?)");
 			$stmt->bind_param("sss", $user, $pass_hash, $mail);
 			$result = $stmt->execute();
 
