@@ -10,10 +10,6 @@ if (isset($_POST["currpass"]) && isset($_POST["newpass"]) && isset($_POST["newpa
 		$newpass = $_POST["newpass"];
 		$newpassver = $_POST["newpassver"];
 
-		$currpass = password_hash($currpass, PASSWORD_DEFAULT);
-		$newpass = password_hash($newpass, PASSWORD_DEFAULT);
-		$newpassver = password_hash($newpassver, PASSWORD_DEFAULT);
-
 		if ($newpass == $newpassver){
 			printError("wrongver");
 			die();
@@ -43,7 +39,7 @@ if (isset($_POST["currpass"]) && isset($_POST["newpass"]) && isset($_POST["newpa
 			$stmt->fetch();
 			if (password_verify($currpass, $selectpass)){
 				$stmt = $conn->prepare("UPDATE `users` SET `password` = ? WHERE `username` = ?");
-				$stmt->bind_param("ss", $newpass, $_SESSION["username"]);
+				$stmt->bind_param("ss", password_hash($newpass, PASSWORD_DEFAULT), $_SESSION["username"]);
 				$result = $stmt->execute();
 
 				if ($result === TRUE){
