@@ -13,7 +13,7 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
 		$conn = new mysqli($sqlserv, $sqluser, $sqlpass, $sqldata);
 
 		if ($conn->connect_error) {
-			printError("connerr", $conn->connect_error)
+			printError("connerr", $conn->connect_error);
     		die();
 		}
 
