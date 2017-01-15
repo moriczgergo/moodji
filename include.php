@@ -29,10 +29,8 @@
 		<div id="header">
 			<center> <!-- CENTER BEGIN !-->
 				<h1>&#x1F601; <img src="img/logo.png"> &#x1F601;</h1> <!-- Title !-->
+				<p><a href="register.php">Register</a> - <a href="login.php">Login</a></p>
 			</center> <!-- CENTER END !-->
-			<div id="logoright">
-				<p>Work in progress...</p>
-			</div>
 		</div>
 		<hr> <!-- Horizontal line !-->
 
