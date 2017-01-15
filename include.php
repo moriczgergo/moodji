@@ -35,7 +35,7 @@
 				session_start();
 				if (isset($_SESSION["username"]) && isset($_SESSION["uid"])){
 				?>
-				<a href="dashboard.php">Dashboard</a> - <a href="friends.php">Friends</a> - <a href="logout.php">Logout</a>	
+				<a href="friends.php">Friends</a> - <a href="settings.php">Settings</a> - <a href="logout.php">Logout</a>	
 				<?php
 				} else {
 				?>
