@@ -20,6 +20,7 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
 		$stmt = $conn->prepare("SELECT `username` FROM `users` WHERE `username` = ?");
 		$stmt->bind_param("s", $user);
 		$result = $stmt->execute();
+		var_dump($result);
 
 		if($result->num_rows == 0){
 			$pass_hash = password_hash($pass, PASSWORD_DEFAULT);
@@ -27,6 +28,7 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
 			$stmt = $conn->prepare("INSERT INTO `users` (`username`, `password`, `email`) VALUES (?, ?, ?)");
 			$stmt->bind_param("sss", $user, $pass_hash, $mail);
 			$result = $stmt->execute();
+			var_dump($result);
 
 			if ($result === TRUE){
 				printSuccess();
