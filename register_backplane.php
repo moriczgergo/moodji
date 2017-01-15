@@ -20,7 +20,6 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
 		$stmt = $conn->prepare("SELECT `username` FROM `users` WHERE `username` = ?");
 		$stmt->bind_param("s", $user);
 		$result = $stmt->execute();
-		echo "<h1>First value: " . var_dump($result) . "</h1>";
 
 		if ($result === FALSE){
 			printError("unknown");
@@ -35,7 +34,6 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
 			$stmt = $conn->prepare("INSERT INTO `users` (`username`, `password`, `email`) VALUES (?, ?, ?)");
 			$stmt->bind_param("sss", $user, $pass_hash, $mail);
 			$result = $stmt->execute();
-			echo "<h1>Second value: " . var_dump($result) . "</h1>";
 
 			if ($result === TRUE){
 				printSuccess();
