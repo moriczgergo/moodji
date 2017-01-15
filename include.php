@@ -29,7 +29,7 @@
 	<body style="background-color: #2F9395;">
 		<div id="header">
 			<center> <!-- CENTER BEGIN !-->
-				<h1>&#x1F601; <img src="img/logo.png"> &#x1F601;</h1> <!-- Title !-->
+				<h1>&#x1F601; <a href="index.php"><img src="img/logo.png"></a> &#x1F601;</h1> <!-- Title !-->
 				<h4>
 				<?php
 				session_start();
