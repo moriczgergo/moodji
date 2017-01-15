@@ -10,7 +10,7 @@ if (isset($_POST["mood"]))
 {
 	if (strlen(trim($_POST["mood"])) > 0)
 	{
-		if (preg_match('/[' . unichr(0x1F300) . '-' . unichr(0x1F5FF) . unichr(0xE000) . '-' . unichr(0xF8FF) . ']/u', $value)) {
+		if (preg_match('/[' . unichr(0x1F300) . '-' . unichr(0x1F5FF) . unichr(0xE000) . '-' . unichr(0xF8FF) . ']/u', $_POST["mood"]) {
 			$mood = base64_encode($_POST["mood"]);
 		} else {
 			printError("nonmoji");
