@@ -22,7 +22,14 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
 		$result = $stmt->execute();
 		echo "<h1>First value: " . var_dump($result) . "</h1>";
 
-		if($result->num_rows == 0){
+		if ($result === FALSE){
+			printError("unknown");
+			die();
+		}
+
+		$stmt->store_result();
+
+		if($stmt->num_rows == 0){
 			$pass_hash = password_hash($pass, PASSWORD_DEFAULT);
 
 			$stmt = $conn->prepare("INSERT INTO `users` (`username`, `password`, `email`) VALUES (?, ?, ?)");
@@ -57,6 +64,8 @@ function printError($error, $ext = ""){
 		echo "<center><h1>Username " . $ext . " already taken.</h1></center>";
 	} elseif ($error = "lastfail"){
 		echo "<center><h1>Something went wrong:</h1><h3>" . $ext . "</h3></center>";
+	} elseif ($error = "unknown"){
+		echo "<center><h1>Something went wrong.</h1></center>";
 	}
 }
 
