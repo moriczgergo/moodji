@@ -17,7 +17,7 @@ if (isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["mail"]))
     		die();
 		}
 
-		$stmt = $conn->prepare("SELECT `username` FROM `users` WHERE `username`=?");
+		$stmt = $conn->prepare("SELECT `username` FROM `users` WHERE `username` = ?");
 		$stmt->bind_param("s", $user);
 		$result = $stmt->execute();
 
