@@ -25,15 +25,15 @@ if (isset($_POST["user"]) && isset($_POST["pass"]))
 			die();
 		}
 
+		$stmt->bind_result($selectpassword, $selectid);
 		$stmt->store_result();
 
 		if($stmt->num_rows == 1){
-			$result = $stmt->get_result();
-			$row = $result->fetch_assoc();
-			if (password_verify($pass, $row["password"]) === TRUE){
+			$stmt->fetch();
+			if (password_verify($pass, $selectpassword) === TRUE){
 				session_start();
 				$_SESSION["username"] = $user;
-				$_SESSION["uid"] = $row["id"];
+				$_SESSION["uid"] = $selectid;
 				printSuccess();
 			} else {
 				printError("wrongpass");
