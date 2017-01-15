@@ -58,11 +58,11 @@ function printError($error, $ext = ""){
 		echo "<center><h1>You didn't enter all the required data</h1></center>";
 	} elseif ($error == "connerr") {
 		echo "<center><h1>Connection to database failed:</h1><h3>" . $ext . "</h3></center>";
-	} elseif ($error = "unametaken"){
+	} elseif ($error == "unametaken"){
 		echo "<center><h1>Username " . $ext . " already taken.</h1></center>";
-	} elseif ($error = "lastfail"){
+	} elseif ($error == "lastfail"){
 		echo "<center><h1>Something went wrong:</h1><h3>" . $ext . "</h3></center>";
-	} elseif ($error = "unknown"){
+	} elseif ($error == "unknown"){
 		echo "<center><h1>Something went wrong.</h1></center>";
 	}
 }
