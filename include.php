@@ -30,8 +30,11 @@
 			<center> <!-- CENTER BEGIN !-->
 				<h1>&#x1F601; <img src="img/logo.png"> &#x1F601;</h1> <!-- Title !-->
 			</center> <!-- CENTER END !-->
-			<hr> <!-- Horizontal line !-->
+			<div id="logoright">
+				<p>Work in progress...</p>
+			</div>
 		</div>
+		<hr> <!-- Horizontal line !-->
 
 		<!-- Bootstrap 4 CDN !-->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
