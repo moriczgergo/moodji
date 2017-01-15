@@ -18,7 +18,6 @@
 
 		<!-- Include CSS files !-->
 		<link rel="stylesheet" type="text/css" href="css/header.css">
-		<link rel="stylesheet" type="text/css" href="css/body.css">
 
 		<!-- Bootstrap 4 CDN !-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -26,7 +25,7 @@
 		<!-- Website title (displays on website's tab in browser) !-->
 		<title>MOODJI</title>
 	</head>
-	<body>
+	<body style="background-color: #2F9395;">
 		<div id="header">
 			<center> <!-- CENTER BEGIN !-->
 				<h1>&#x1F601; <img src="img/logo.png"> &#x1F601;</h1> <!-- Title !-->
